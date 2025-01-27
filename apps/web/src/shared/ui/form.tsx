@@ -52,7 +52,7 @@ export const Form = () => {
       )}
 
       <div className="grid grid-cols-2 gap-4">
-        {state.originalMessageAssessment && (
+        {typeof state.originalMessageAssessment === "number" && (
           <div className="bg-neutral-2 border border-neutral-7 rounded-lg p-4">
             <h3
               className="font-medium text-gray-700 mb-2"
@@ -65,7 +65,7 @@ export const Form = () => {
           </div>
         )}
 
-        {state.finalMessageAssessment && (
+        {typeof state.finalMessageAssessment === "number" && (
           <div className="bg-neutral-2 border border-neutral-7 rounded-lg p-4">
             <h3
               className="font-medium text-gray-700 mb-2"
