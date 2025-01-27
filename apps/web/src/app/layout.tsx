@@ -26,10 +26,10 @@ export default async function RootLayout(props: Props) {
         suppressHydrationWarning
         className={cn(
           geistSans.variable,
-          "antialiased container mx-auto bg-neutral-1 text-neutral-12"
+          "antialiased container mx-auto bg-background text-neutral-12"
         )}
       >
-        <ThemeProvider disableTransitionOnChange>
+        <ThemeProvider disableTransitionOnChange attribute="class">
           {props.children}
         </ThemeProvider>
       </body>
