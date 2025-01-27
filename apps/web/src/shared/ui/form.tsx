@@ -16,7 +16,7 @@ export const Form = () => {
     >
       <div className="flex flex-col space-y-2">
         <textarea
-          className="min-h-[120px] p-4 rounded-lg border border-gray-200 focus:border-blue-500 resize-none transition-all"
+          className="min-h-[120px] p-4 rounded-lg bg-neutral-3 border border-neutral-7 focus:border-neutral-8 outline-none ring-0 resize-none transition-all"
           name="input"
           defaultValue={state.originalMessage}
           placeholder="Напишите агрессивное сообщение здесь..."
@@ -53,7 +53,7 @@ export const Form = () => {
 
       <div className="grid grid-cols-2 gap-4">
         {typeof state.originalMessageAssessment === "number" && (
-          <div className="bg-neutral-2 border border-neutral-7 rounded-lg p-4">
+          <div className="bg-neutral-2 border border-neutral-6 rounded-lg p-4">
             <h3
               className="font-medium text-gray-700 mb-2"
               children="Оценка оригинального текста"
@@ -66,7 +66,7 @@ export const Form = () => {
         )}
 
         {typeof state.finalMessageAssessment === "number" && (
-          <div className="bg-neutral-2 border border-neutral-7 rounded-lg p-4">
+          <div className="bg-neutral-2 border border-neutral-6 rounded-lg p-4">
             <h3
               className="font-medium text-gray-700 mb-2"
               children="Оценка финального текста"
