@@ -1,5 +1,5 @@
 {
-  "name": "is-gluten-free-app",
+  "name": "be-friendly-app",
   "private": true,
   "scripts": {
     "build": "turbo build",

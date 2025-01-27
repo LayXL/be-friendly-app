@@ -1,4 +1,4 @@
-name: is-gluten-free
+name: be-friendly-app
 services:
   frontend:
     restart: always
@@ -6,4 +6,4 @@ services:
       context: .
       dockerfile: frontend.Dockerfile
     ports:
-      - "8191:3000"
+      - "8192:3000"

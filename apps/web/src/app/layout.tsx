@@ -1,43 +1,37 @@
-import type { Metadata } from "next"
-import { Geist } from "next/font/google"
 import "./globals.css"
-import { NextIntlClientProvider } from "next-intl"
-import { getMessages } from "next-intl/server"
+
+import type { Metadata } from "next"
+import localFont from "next/font/local"
 import { ThemeProvider } from "next-themes"
 import type { ReactNode } from "react"
+import cn from "@/shared/utils/cn"
 
-const geistSans = Geist({
+const geistSans = localFont({
+  src: "./fonts/Geist[wght].ttf",
   variable: "--font-geist-sans",
-  subsets: ["latin"],
 })
 
 export const metadata: Metadata = {
-  title: "Is Gluten-free?",
+  title: "Be Friendly!",
 }
 
-export default async function RootLayout(
-  props: Readonly<{ children: ReactNode; params: Promise<{ locale: string }> }>
-) {
-  const params = await props.params
+type Props = Readonly<{
+  children: ReactNode
+}>
 
-  const messages = await getMessages()
-
+export default async function RootLayout(props: Props) {
   return (
-    <html lang={params.locale} suppressHydrationWarning>
+    <html lang={"ru"} suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={[
+        className={cn(
           geistSans.variable,
-          "antialiased",
-          "container mx-auto",
-          "bg-neutral-1 text-neutral-12",
-        ].join(" ")}
+          "antialiased container mx-auto bg-neutral-1 text-neutral-12"
+        )}
       >
-        <NextIntlClientProvider messages={messages}>
-          <ThemeProvider disableTransitionOnChange>
-            {props.children}
-          </ThemeProvider>
-        </NextIntlClientProvider>
+        <ThemeProvider disableTransitionOnChange>
+          {props.children}
+        </ThemeProvider>
       </body>
     </html>
   )
