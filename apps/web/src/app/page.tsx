@@ -7,7 +7,9 @@ export default function Page() {
         className="text-center text-xl font-semibold"
         children="Be friendly"
       />
-      <Form />
+      <div className="w-full grid gap-4">
+        <Form />
+      </div>
     </div>
   )
 }
