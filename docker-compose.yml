@@ -1,0 +1,9 @@
+name: is-gluten-free
+services:
+  frontend:
+    restart: always
+    build:
+      context: .
+      dockerfile: frontend.Dockerfile
+    ports:
+      - "8191:3000"

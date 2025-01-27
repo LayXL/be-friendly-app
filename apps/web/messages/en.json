@@ -1,0 +1,13 @@
+{
+  "title": "Is {emoji} {name} \uD83C\uDF3E gluten-free?",
+  "answer": {
+    "yes": "Yes",
+    "no": "No",
+    "questionable": "Questionable"
+  },
+  "explanation": "Explanation",
+  "search-title": "You may also want to look for another product",
+  "search-placeholder": "Search product",
+  "loading": "Loading, please wait",
+  "main-title": "Check the product for gluten"
+}
